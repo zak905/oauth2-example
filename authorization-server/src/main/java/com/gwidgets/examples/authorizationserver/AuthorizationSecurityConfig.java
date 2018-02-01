@@ -30,7 +30,7 @@ public class AuthorizationSecurityConfig extends AuthorizationServerConfigurerAd
         clients.inMemory().withClient("my-trusted-client")
                 .authorizedGrantTypes("password",
                         "refresh_token", "implicit", "client_credentials", "authorization_code")
-               // .authorities("ROLE_CLIENT", "ROLE_TRUSTED_CLIENT")
+                .authorities("CLIENT")
                 .scopes("read", "write", "trust")
                 .accessTokenValiditySeconds(60)
                 .redirectUris("http://localhost:8081/test.html")
