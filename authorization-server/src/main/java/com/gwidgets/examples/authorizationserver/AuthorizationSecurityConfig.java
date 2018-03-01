@@ -32,7 +32,7 @@ public class AuthorizationSecurityConfig extends AuthorizationServerConfigurerAd
                         "refresh_token", "implicit", "client_credentials", "authorization_code")
                 .authorities("CLIENT")
                 .scopes("read", "write", "trust")
-                .accessTokenValiditySeconds(60)
+                .accessTokenValiditySeconds(3600)
                 .redirectUris("http://localhost:8081/test.html")
                 .resourceIds("resource")
                 .secret("mysecret");
